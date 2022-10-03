@@ -18,4 +18,4 @@ spec:
      - name: simple-app-cont
        image: xrlim/simple_app:latest
        ports:
-       - containerPort: 8500
+       - containerPort: 80
