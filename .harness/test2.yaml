@@ -24,7 +24,7 @@ pipeline:
                         store:
                           type: Github
                           spec:
-                            connectorRef: GitHubOrg
+                            connectorRef: personalGit
                             gitFetchType: Branch
                             paths:
                               - deployment.yaml
