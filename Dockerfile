@@ -1,11 +1,6 @@
-FROM python:3.8-buster
-RUN pip3 install flask flask_restful
+FROM python:3.8.10
 COPY requirements.txt /
 RUN pip3 install -r /requirements.txt
 COPY . /app
 WORKDIR /app
-COPY main.py /app
-
-EXPOSE 80
-
-CMD ["python3", "main.py"]
+ENTRYPOINT ["uvicorn", "main:app",  "--host", "0.0.0.0", "--port", "8500", "--reload"]
