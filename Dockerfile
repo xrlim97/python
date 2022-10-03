@@ -8,4 +8,4 @@ COPY main.py /app
 
 EXPOSE 5000
 
-CMD ["python3", "hello-virtualization.py"]
+CMD ["python3", "main.py"]

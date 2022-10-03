@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-virtualization-container
-        image: xrlim/hello-virt:latest
+        image: xrlim/simple-app:latest
         ports:
         - containerPort: 5000
