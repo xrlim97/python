@@ -1,6 +1,4 @@
 pipeline:
-  name: test2
-  identifier: test2
   projectIdentifier: GKEDeployment
   orgIdentifier: default
   tags: {}
@@ -24,7 +22,7 @@ pipeline:
                         store:
                           type: Github
                           spec:
-                            connectorRef: personalGit
+                            connectorRef: GitHubOrg
                             gitFetchType: Branch
                             paths:
                               - deployment.yaml
@@ -35,7 +33,7 @@ pipeline:
                 artifacts:
                   primary:
                     spec:
-                      connectorRef: ddockerr
+                      connectorRef: docker3
                       imagePath: xrlim/simple-app
                       tag: <+input>
                     type: DockerRegistry
@@ -45,7 +43,7 @@ pipeline:
             infrastructureDefinition:
               type: KubernetesDirect
               spec:
-                connectorRef: test
+                connectorRef: test3
                 namespace: default
                 releaseName: release-<+INFRA_KEY>
             allowSimultaneousDeployments: false
@@ -72,3 +70,5 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+  identifier: test3
+  name: test3
