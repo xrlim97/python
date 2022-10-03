@@ -46,7 +46,7 @@ pipeline:
               type: KubernetesDirect
               spec:
                 connectorRef: test
-                namespace: harness-delegate-ng
+                namespace: default
                 releaseName: release-<+INFRA_KEY>
             allowSimultaneousDeployments: false
           execution:
