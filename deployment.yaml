@@ -16,6 +16,6 @@ spec:
    spec:
      containers:
      - name: simple-app-cont
-       image: xrlim/simple_app:latest
+       image: xrlim/simple-app:latest
        ports:
        - containerPort: 80
