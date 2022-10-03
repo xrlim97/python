@@ -36,7 +36,7 @@ pipeline:
                   primary:
                     spec:
                       connectorRef: ddockerr
-                      imagePath: xrlim/simple_app
+                      imagePath: xrlim/simple-app
                       tag: <+input>
                     type: DockerRegistry
               type: Kubernetes
