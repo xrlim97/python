@@ -17,5 +17,26 @@ spec:
      containers:
      - name: simple-app-cont
        image: xrlim/simple_app:latest
-       ports:
-       - containerPort: 80
+       # ports:
+       # - containerPort: 80
+       
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "simple-app-hpa-rvfu"
+  namespace: "default"
+  labels:
+    app: "simple-app"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "simple-app"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
