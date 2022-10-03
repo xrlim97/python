@@ -15,7 +15,7 @@ spec:
        app: simple-app
    spec:
      containers:
-     - name: xrlim/simple_app
+     - name: simple_app
        image: xrlim/simple_app:latest
        ports:
        - containerPort: 8500
