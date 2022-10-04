@@ -17,7 +17,7 @@ pipeline:
                   - name: expose
                     type: String
                     description: ""
-                    value: kubectl expose deployment simple-app -type=LoadBalancer --name=simple-app-svc
+                    value: kubectl expose deployment simple-deployment -type=LoadBalancer --name=simple-app-svc
                 manifests:
                   - manifest:
                       identifier: dd
