@@ -13,11 +13,7 @@ pipeline:
             serviceRef: dd
             serviceDefinition:
               spec:
-                variables:
-                  - name: expose
-                    type: String
-                    description: ""
-                    value: kubectl expose deployment simple-deployment --type=LoadBalancer --name=simple-app-svc
+                variables: []
                 manifests:
                   - manifest:
                       identifier: dd
@@ -30,6 +26,7 @@ pipeline:
                             gitFetchType: Branch
                             paths:
                               - deployment.yaml
+                              - service.yaml
                             repoName: python
                             branch: main
                         skipResourceVersioning: false
