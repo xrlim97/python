@@ -18,5 +18,5 @@ spec:
      - name: simple-app-cont
        image: docker.io/xrlim/simple-app:latest
        ports:
-       - containerPort: 8500
+       - containerPort: 8080
        

@@ -3,11 +3,11 @@ kind: Service
 metadata:
  name: simple-service
  labels:
-   app: ecommerce
+   app: simple-app
 spec:
  selector:
    app: simple-app
  type: LoadBalancer
  ports:
-   - port: 8500
-     targetPort: 8500
+   - port: 8080
+     targetPort: 80
