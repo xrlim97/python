@@ -5,7 +5,7 @@ metadata:
  labels:
    app: simple-app
 spec:
- replicas: 1
+ replicas: 2
  selector:
    matchLabels:
      app: simple-app
@@ -16,4 +16,7 @@ spec:
    spec:
      containers:
      - name: simple-app-cont
-       image: docker.io/xrlim/simple-app:latest       
+       image: docker.io/xrlim/simple-app:latest
+       ports:
+        - containerPort: 8080       
+        
