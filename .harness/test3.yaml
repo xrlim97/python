@@ -65,4 +65,7 @@ pipeline:
               action:
                 type: StageRollback
   identifier: test3
-  name: test3
+  name: gkeSampleDeploy
+  description: |-
+    Docker Image is from GKE
+    However, GitHub Deploy, Service Settings is from my personal Git Account
