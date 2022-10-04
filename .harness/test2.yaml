@@ -27,16 +27,16 @@ pipeline:
                             connectorRef: personalGit
                             gitFetchType: Branch
                             paths:
-                              - deployment.yaml
-                              - service.yaml
-                            repoName: python
+                              - hello-app/hw-deploy.yaml
+                              - hello-app/hw-svc.yaml
+                            repoName: sample-k8-app
                             branch: main
                         skipResourceVersioning: false
                 artifacts:
                   primary:
                     spec:
                       connectorRef: ddockerr
-                      imagePath: xrlim/simple-app
+                      imagePath: xrlim/k8-app
                       tag: <+input>
                     type: DockerRegistry
               type: Kubernetes
