@@ -15,7 +15,7 @@ spec:
        app: simple-app
    spec:
      containers:
-        - name: simple-app-cont
+      - name: simple-app-cont
         image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
      # - name: simple-app-cont
        # image: docker.io/xrlim/simple-app:latest
