@@ -15,8 +15,10 @@ spec:
        app: simple-app
    spec:
      containers:
+     # If I deploy from public image.
      - name: simple-sample-app
        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
+     # If I deploy from my personal Docker, I have to add Artifacts connection in Harness to fetch my remote repo. However, will have an error loading... not sure why? 4th Oct.
      # - name: simple-app-cont
        # image: docker.io/xrlim/simple-app:latest
        ports:
