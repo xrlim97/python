@@ -8,7 +8,6 @@ spec:
  selector:
    app: simple-app
  type: LoadBalancer
-  ports:
-  - protocol: TCP
-    port: 60000
-    targetPort: 50001
+ ports:
+   - port: 8080
+     targetPort: 80

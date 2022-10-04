@@ -16,7 +16,4 @@ spec:
    spec:
      containers:
      - name: simple-app-cont
-       image: docker.io/xrlim/simple-app:latest
-       env:
-        - name: "PORT"
-          value: "50001"       
+       image: docker.io/xrlim/simple-app:latest       
