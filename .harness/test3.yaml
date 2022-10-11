@@ -30,7 +30,13 @@ pipeline:
                             repoName: python
                             branch: main
                         skipResourceVersioning: false
-                artifacts: {}
+                artifacts:
+                  primary:
+                    spec:
+                      connectorRef: docker3
+                      imagePath: xrlim/simple_app
+                      tag: <+input>
+                    type: DockerRegistry
               type: Kubernetes
           infrastructure:
             environmentRef: test
